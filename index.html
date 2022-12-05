@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<title>🎶 Music Player</title>
+</head>
+<body>
+
+    <audio src="" id="musicElem"></audio>
+
+ 
+    <button class="theme-toggle">
+        <span class="mdi mdi-brightness-7 mdi-spin mdi-18px"></span>
+      </button>
+      <div class="card">
+        <img src="" alt="artist Cover" id="cover" />
+        <h2 class="card__titre" id="name"></h2>
+        <span class="card__artist" id="author"></span>
+        <div class="card__controllers">
+          <input type="range" value="0" id="tracker" />
+          <span class="card__controllers__time" id="currentTime">0:00</span>
+          <span class="card__controllers__time" id="infoTime"></span>
+        </div>
+        <div class="card__actions">
+          <button id="back">
+            <span class="mdi mdi-step-backward"></span>
+          </button>
+          <button id="prev">
+            <span class="mdi mdi-skip-backward"></span>
+          </button>
+          <button class="card__actions--main" id="play">
+            <span class="mdi mdi-play"></span>
+          </button>
+          <button id="next">
+            <span class="mdi mdi-skip-forward"></span>
+          </button>
+          <button id="forward">
+            <span class="mdi mdi-step-forward"></span>
+          </button>
+        </div>
+      </div>
+
+      <script>
+        (function App() {
+  let isDark = false;
+  if (localStorage.getItem("dark-mode")) {
+    isDark = true;
+    setDarkTheme();
+  }
+  const themeToggle = document.querySelector(".theme-toggle");
+  themeToggle.addEventListener("click", () => {
+    if (isDark) {
+      setLightTheme();
+      isDark = false;
+      ManageLocalStorage("DELETE");
+      return;
+    }
+    setDarkTheme();
+    ManageLocalStorage("ADD");
+    isDark = true;
+  });
+
+  function setLightTheme() {
+    document.body.classList.remove("dark");
+  }
+  function setDarkTheme() {
+    document.body.classList.add("dark");
+  }
+
+  function ManageLocalStorage(command) {
+    if (command === "DELETE") {
+      localStorage.removeItem("dark-mode");
+      return;
+    }
+    localStorage.setItem("dark-mode", true);
+  }
+})();
+      </script>
+<script src="js/script.js"></script>
+
+</body>
+</html> 
