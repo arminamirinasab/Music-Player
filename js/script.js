@@ -1,34 +1,22 @@
 ﻿// Musics
 let Musics = [
   {
-    name: "Mashroote",
-    author: "Mirza Koochak Khan",
-    src: "./media/jangali.mp3",
-    cover: "./covers/jangali.jfif",
+    name: "Bella Ciao",
+    author: "Maneli Jamal",
+    src: "./media/bellaciao.mp3",
+    cover: "./covers/bellaciao.jpg",
   },
   {
-    name: "Mardomak",
-    author: "Pishro",
-    src: "./media/mardomak.mp3",
-    cover: "./covers/mardomak.jpg",
+    name: "For",
+    author: "Shervin Hajipour",
+    src: "./media/for.mp3",
+    cover: "./covers/shervin.jfif",
   },
   {
-    name: "Qabil",
-    author: "Pishro",
-    src: "./media/qabil.mp3",
-    cover: "./covers/qabil.jpg",
-  },
-  {
-    name: "Rock A Chock",
-    author: "Pishro Feat Hidden",
-    src: "./media/frequency.mp3",
-    cover: "./covers/frequency.jfif",
-  },
-  {
-    name: "Divooneh 2",
-    author: "Pishro",
-    src: "./media/divooneh.mp3",
-    cover: "./covers/divooneh.jpg",
+    name: "Farewell After Leaving",
+    author: "Mehadi Yarahi",
+    src: "./media/farewell.mp3",
+    cover: "./covers/farewell.jpg",
   }
 ];
 

@@ -98,7 +98,7 @@ body.dark {
 .card__controllers input[type=range] {
   flex-basis: 100%;
   -webkit-appearance: none;
-  height: 4px;
+  height: 5px;
   border-radius: 5px;
   background: #d8d8d8;
   outline: none;
@@ -109,8 +109,8 @@ body.dark {
 .card__controllers input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 9px;
-  height: 9px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: #8643ff;
   cursor: pointer;
