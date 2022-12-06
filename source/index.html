@@ -12,7 +12,7 @@
 
  
     <button class="theme-toggle">
-        <span class="mdi mdi-brightness-7 mdi-spin mdi-18px"></span>
+        <span class="mdi mdi-weather-night mdi-18px"></span>
       </button>
       <div class="card">
         <img src="" alt="artist Cover" id="cover" />
@@ -60,6 +60,7 @@
     setDarkTheme();
     ManageLocalStorage("ADD");
     isDark = true;
+    themeToggle.blur();
   });
 
   function setLightTheme() {
