@@ -46,7 +46,7 @@ function checkMusic() {
 }
 
 function calculateTime() {
-  setTimeout(function () {
+  musicElem.addEventListener("loadedmetadata" , function() {
     let songTime = Math.floor(musicElem.duration);
     let sMinute = Math.floor(songTime / 60);
     let sSecond = songTime - sMinute * 60;
@@ -54,7 +54,7 @@ function calculateTime() {
       sSecond = "0" + sSecond;
     }
     infoTime.innerHTML = `${sMinute}:${sSecond}`;
-  }, 100);
+  });
 }
 
 // Change With Range
